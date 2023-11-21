@@ -2,4 +2,58 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* border: 1px dashed black; */
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    color: white;
+    background-color: #F26D10;
+    padding-block: 15px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a:hover,
+li:hover {
+    cursor: pointer;
+}
+
+.content {
+    width: 70%;
+    margin: 0 auto;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+header nav ul:first-child li:hover {
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+    text-transform: capitalize;
+}
+
+header nav figure {
+    width: 10%;
 }
