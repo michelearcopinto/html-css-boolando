@@ -110,22 +110,24 @@ header nav figure img:hover {
 main {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
     margin-top: 54.8px;
     padding-block: 50px;
 }
 
-section {
+main section {
+    width: calc(100% / 3 - 20px);
     padding: 5px;
     border-radius: 5px;
 }
 
-section:hover {
+main section:hover {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     background-color: lightsalmon;
     color: white;
 }
 
-section:hover figure .icon.add-to {
+main section:hover figure .icon.add-to {
     background-color: lightsalmon;
 }
 
@@ -133,6 +135,15 @@ main section figure {
     position: relative;
     cursor: pointer;
     margin-bottom: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+main section figure:hover .hidden {
+    display: block;
+    position: absolute;
 }
 
 .icon.add-to {
@@ -186,20 +197,17 @@ main section figure {
 }
 
 .name-item {
+    display: block;
     text-transform: uppercase;
     font-weight: 700;
-    display: inline-block;
 }
 
-.name-item::before {
-    content: "Levi's";
-    display: block;
-    text-transform: none;
-    font-weight: 400;
+.brand-item {
     font-size: 13px;
+    text-transform: capitalize;
 }
 
-.name-item:hover::before {
+.brand-item:hover {
     text-decoration: underline;
     cursor: pointer;
     color: purple;
@@ -209,8 +217,7 @@ main section figure {
     font-size: 13px;
 }
 
-.price-item::before {
-    content: "14,99 €";
+.price-item span:first-child {
     color: #FF0000;
     font-weight: 600;
     margin-right: 5px;
@@ -219,8 +226,4 @@ main section figure {
 .price-item::after {
     content: "29,99 €";
     text-decoration: line-through;
-}
-
-body {
-    height: 1000000px;
 }
