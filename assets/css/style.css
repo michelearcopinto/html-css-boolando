@@ -33,7 +33,8 @@ img {
     display: block;
 }
 
-header a {
+header a,
+footer a {
     color: white;
 }
 
@@ -64,7 +65,6 @@ header nav ul {
 
 li {
     list-style-type: none;
-    text-transform: capitalize;
 }
 
 header nav ul:first-child li:hover {
@@ -223,7 +223,88 @@ main section figure:hover .hidden {
     margin-right: 5px;
 }
 
-.price-item::after {
-    content: "29,99 €";
+.price-item span:nth-child(2) {
     text-decoration: line-through;
+}
+
+footer {
+    background-color: #1A1A1A;
+    padding-block: 30px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+footer nav div div li::first-letter,
+footer nav *::first-letter,
+header nav ul li {
+    text-transform: capitalize;
+}
+
+.legal-infos span {
+    display: inline-block;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.legal-infos ul {
+    display: flex;
+    gap: 15px;
+}
+
+.legal-infos li,
+.social span {
+    font-size: 12px;
+}
+
+.social span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.social figure ul li {
+    font-size: 20px;
+}
+
+.social figure ul {
+    display: flex;
+    gap: 7px;
+}
+
+.icon.twitter::before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\e61a";
+}
+
+.icon.facebook::before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f082";
+}
+
+.icon.instagram::before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\e055";
+}
+
+.icon.pinterest::before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f0d3";
+}
+
+.icon.youtube::before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f431";
+}
+
+header nav ul:nth-child(3) a:active,
+.social figure ul li a:active {
+    color: rgb(150, 150, 150);
 }
