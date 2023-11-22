@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* border: 1px dashed black; */
 }
 
 html {
@@ -25,7 +24,8 @@ header {
     position: fixed;
     z-index: 1;
     top: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
 }
 
 img {
@@ -36,13 +36,14 @@ img {
 header a,
 footer a {
     color: white;
+    text-decoration: none;
 }
 
 header a:hover,
 header li:hover,
 .icon.add-to:hover,
-.sale:hover,
-.eco:hover {
+main section:hover .sale,
+main section:hover .eco {
     cursor: pointer;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
@@ -109,6 +110,7 @@ header nav figure img:hover {
 
 main {
     display: flex;
+    justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
     margin-top: 54.8px;
@@ -116,7 +118,8 @@ main {
 }
 
 main section {
-    width: calc(100% / 3 - 20px);
+    flex-basis: calc(100% / 3 - 20px);
+    min-width: 227px;
     padding: 5px;
     border-radius: 5px;
 }
