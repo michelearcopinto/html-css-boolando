@@ -110,7 +110,6 @@ header nav figure img:hover {
 
 main {
     display: flex;
-    justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
     margin-top: 54.8px;
@@ -118,7 +117,7 @@ main {
 }
 
 main section {
-    flex-basis: calc(100% / 3 - 20px);
+    flex-basis: calc(100% / 3 - (20px / 3 * 2));
     min-width: 227px;
     padding: 5px;
     border-radius: 5px;
